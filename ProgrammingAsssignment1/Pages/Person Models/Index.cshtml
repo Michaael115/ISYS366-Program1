@@ -1,0 +1,22 @@
+﻿@page
+@model ProgrammingAsssignment1.Pages.Person_Models.IndexModel
+@{
+	ViewData["Title"] = "Person Index";
+}
+
+<h1>Person index</h1>
+@if (!string.IsNullOrEmpty(Model.CurrentPerson.Name)){
+	<h1>Welcome @Model.CurrentPerson.Name</h1>
+	<h2>You are @Model.CurrentPerson.Age years old</h2>
+}
+else
+{
+	<h1>No current person</h1>
+}
+
+<ul>
+	<li><a asp-page="/Person Models/AddInfo" asp-route-name="Bob">Add Info for Bob</a></li>
+	<li><a asp-page ="/Person Models/AddInfo" asp-route-name = "Mike"> Add Info for Mike</a></li>
+	<li><a asp-page="/Person Models/AddInfo" asp-route-name="John"> Add Info for John</a></li>
+</ul>
+
